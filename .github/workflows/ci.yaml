@@ -36,6 +36,8 @@ jobs:
           uv run ty check .
 
   validate-commits:
+    if: github.event.before != '0000000000000000000000000000000000000000'
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository with history
