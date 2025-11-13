@@ -44,5 +44,8 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Download central commitlint config
+        run: curl -o ./commitlint.config.mjs https://raw.githubusercontent.com/alfaseekers/.github/refs/heads/main/.github/configs/commitlint.config.mjs
+
       - name: Validate commits
         uses: wagoid/commitlint-github-action@v6
